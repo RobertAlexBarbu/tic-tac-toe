@@ -1,6 +1,8 @@
 :root {
     --color1: #f9fafb;
     --color2: #e5e7eb;
+    --color3: #6b7280;
+    --shadow: 0 0 5px 1px rgb(189, 189, 189);
 }
 @font-face {
     font-family: calibri;
@@ -22,6 +24,9 @@ body {
 }
 button {
     font-family: calibri;
+    color: var(--color1);
+    cursor: pointer;
+    font-weight: bold;
 }
 .header {
     background-color: var(--color1);
@@ -32,7 +37,7 @@ button {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 0 5px 1px rgb(145, 145, 145);
+    box-shadow: var(--shadow);
     position: relative;
     z-index: 1;
 
@@ -56,11 +61,11 @@ button {
     width: min(95vw, 65vh);
     height: min(95vw, 65vh);
     background-color: var(--color1);
-    box-shadow: 0 0 5px 1px rgb(145, 145, 145);
+    box-shadow: var(--shadow);
     border-radius: 15px;
 }
 
-.options {
+.play {
     background-color: var(--color1);
     height: 15%;
     display: flex;
@@ -68,11 +73,49 @@ button {
     justify-content: center;
     padding-left: 4vw;
     padding-right: 4vw;
-    box-shadow: 0 0 5px 1px rgb(145, 145, 145);
+    box-shadow: 0 0 5px 1px rgb(181, 181, 181);
 }
-.options button {
+#playBtn {
     height: 50%;
     font-size: 4rem;
     max-width: 400px;
     flex: auto;
+    background-color: var(--color3);
+    border-radius: 15px;
+    border: 2px solid var(--color3);
+}
+#playBtn:active {
+    background-color: var(--color1);
+    color: var(--color3);
+}
+form {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+ 
+}
+form.active {
+    visibility: visible;
+}
+form .main {
+    width:min(95vw, 50vh);
+    height: 55%;
+    background-color: var(--color2);
+    border-radius: 15px;
+    transform:  scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+form .main.active {
+    transform: scale(1);
 }

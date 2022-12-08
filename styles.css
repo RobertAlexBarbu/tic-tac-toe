@@ -1,0 +1,58 @@
+html {
+    font-size: 1vh;
+}
+html * {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: red;
+    height: 12%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header svg {
+    width: 6rem;
+}
+.header .text {
+    font-size: 6rem;;
+    background-color: green;
+}
+
+
+.gameContainer {
+    height: 73%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameContainer .game {
+    width: min(95vw, 65vh);
+    height: min(95vw, 65vh);
+    background-color: purple;
+}
+
+.options {
+    background-color: blue;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+.options button {
+    height: 50%;
+    font-size: 4rem;
+    max-width: 400px;
+    flex: auto;
+}

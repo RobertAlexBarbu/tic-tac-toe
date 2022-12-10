@@ -1,14 +1,14 @@
-const form = document.querySelector("form");
-const formMain = document.querySelector("form .main");
+const options = document.querySelector(".options");
+const optionsBtns = document.querySelector(".optionsBtns");
 const playBtn = document.querySelector("#playBtn");
 playBtn.addEventListener('click', activateOptions);
 function activateOptions() {
-    form.classList.add("active");
-    formMain.classList.add("active");
+    options.classList.add("active");
+    optionsBtns.classList.add("active");
 }
-form.addEventListener('click', exitOptions);
+options.addEventListener('click', exitOptions);
 function exitOptions() {
-    form.classList.remove("active");
-    formMain.classList.remove("active");
+    options.classList.remove("active");
+    optionsBtns.classList.remove("active");
 }
-formMain.addEventListener('click', (event)=>{event.stopPropagation();})
+optionsBtns.addEventListener('click', (event)=>{event.stopPropagation();})

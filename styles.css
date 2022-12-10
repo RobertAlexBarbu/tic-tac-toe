@@ -3,6 +3,8 @@
     --color2: #e5e7eb;
     --color3: #6b7280;
     --shadow: 0 0 3px 1px rgb(189, 189, 189);
+    --player : #3b82f6;
+    --computer: #8b5cf6;
 }
 @font-face {
     font-family: calibri;
@@ -27,6 +29,7 @@ button {
     color: var(--color1);
     cursor: pointer;
     font-weight: bold;
+    border-radius: 15px;
 }
 
 
@@ -114,13 +117,59 @@ button {
 }
 .optionsBtns {
     width:min(95vw, 50vh);
-    height: 55%;
+    height: 30%;
     background-color: var(--color2);
     border-radius: 15px;
     transform:  scale(0);
     transition: 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
 }
-
 .optionsBtns.active {
     transform: scale(1);
+}
+.gameModeText {
+    font-size: 3rem;
+}
+.optionsBtns button {
+    width: 80%;
+    height: 30%;
+    font-size: 2.5rem;
+    color: var(--color2);
+    font-weight: bold;
+}
+#playerBtn {
+    background-color: var(--player);
+    border: 2px solid var(--player);
+}
+#playerBtn:active {
+    background-color: var(--color2);
+    color: var(--player);
+}
+#computerBtn {
+    background-color: var(--computer);
+    border: 2px solid var(--computer);
+}
+#computerBtn:active {
+    background-color: var(--color2);
+    color: var(--computer);
+}
+#closeOptionsBtn {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: var(--color2);
+    border: none;
+    color: var(--color3);
+    width: min-content;
+    height: auto;
+    
+    font-size: 3rem;
+}
+#closeOptionsBtn:active {
+    font-size: 2.5rem;
 }

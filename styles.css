@@ -95,10 +95,15 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.cell.occupied {
+    cursor: default;
 }
 .xo {
     font-weight: bold;
     font-size: max(10rem, 7vw);
+    cursor: default;
 }
 
 /* FOOTER */

@@ -3,8 +3,8 @@
     --color2: #e5e7eb;
     --color3: #6b7280;
     --shadow: 0 0 3px 1px rgb(189, 189, 189);
-    --player : #3b82f6;
-    --computer: #8b5cf6;
+    --won : #16a34a;
+    --draw: #f59e0b;
     --text: #262626;
 }
 @font-face {
@@ -101,9 +101,15 @@ button {
     cursor: default;
 }
 .xo {
-    font-weight: bold;
-    font-size: max(10rem, 7vw);
+    font-size: max(9rem, 6vw);
     cursor: default;
+}
+.xo.won {
+    font-weight: bold;
+    color: var(--won);
+}
+.xo.draw {
+    color: var(--draw);
 }
 
 /* FOOTER */
@@ -133,79 +139,5 @@ button {
 
 
 
-/* GAME OPTIONS */
-.options {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-}
-.options.active {
-    visibility: visible;
-}
-.optionsBtns {
-    width:min(95vw, 50vh);
-    height: 30%;
-    background-color: var(--color2);
-    border-radius: 15px;
-    transform:  scale(0);
-    transition: 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    position: relative;
-}
-.optionsBtns.active {
-    transform: scale(1);
-}
-.gameModeText {
-    font-size: 3rem;
-}
-.optionsBtns button {
-    width: 80%;
-    height: 30%;
-    font-size: 2.5rem;
-    color: var(--color2);
-    font-weight: bold;
-}
-#playerBtn {
-    background-color: var(--player);
-    border: 2px solid var(--player);
-}
-#playerBtn:active {
-    background-color: var(--color2);
-    color: var(--player);
-}
-#computerBtn {
-    background-color: var(--computer);
-    border: 2px solid var(--computer);
-}
-#computerBtn:active {
-    background-color: var(--color2);
-    color: var(--computer);
-}
-#closeOptionsBtn {
-    position: absolute;
-    top: 3%;
-    right: 3%;
-    background-color: var(--color2);
-    border: none;
-    color: var(--color3);
-    width: min-content;
-    height: auto;
-    
-    font-size: 3rem;
-}
-#closeOptionsBtn:active {
-    font-size: 2.5rem;
-}
+
 
